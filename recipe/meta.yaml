@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --use-pep517 -vv
+  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps -vv
   entry_points:
     - bioservices=bioservices.main:main
 
