@@ -7,9 +7,11 @@ Home: https://github.com/cokelaer/bioservices
 
 Package license: GPL-3.0-only
 
-Summary: Access to Biological Web Services from Python
+Summary: Access to Biological Web Services from Python.
 
-Documentation: https://bioservices.readthedocs.io/en/main/
+Development: https://github.com/cokelaer/bioservices
+
+Documentation: https://bioservices.readthedocs.io/en/main
 
 Current build status
 ====================
