@@ -1,17 +1,17 @@
 {% set name = "BioServices" %}
-{% set version = "1.11.2" %}
-{% set sha256 = "31baaab4ab813b93f79995ba8cad431a16cbee99e1b0c6f9e419dd4be0c73a9e" %}
+{% set version = "1.14.0" %}
+{% set sha256 = "82208d6d8763f143b59790433b3b3661d57345a3fdbfeaee87c21ef3a422b3fa" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps -vv
   entry_points:
