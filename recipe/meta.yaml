@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
     - poetry-core
   run:
-    - python >=3.7
+    - python >=3.9
     - appdirs
     - beautifulsoup4
     - click
