@@ -1,6 +1,6 @@
 {% set name = "BioServices" %}
-{% set version = "1.14.0" %}
-{% set sha256 = "82208d6d8763f143b59790433b3b3661d57345a3fdbfeaee87c21ef3a422b3fa" %}
+{% set version = "1.15.0" %}
+{% set sha256 = "e38e888f6dcd9a158717f683143a297d070261cd19af6210627e53c3dbc7804b" %}
 
 package:
   name: {{ name|lower }}
