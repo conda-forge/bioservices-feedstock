@@ -1,28 +1,29 @@
 {% set name = "BioServices" %}
-{% set version = "1.11.2" %}
-{% set sha256 = "31baaab4ab813b93f79995ba8cad431a16cbee99e1b0c6f9e419dd4be0c73a9e" %}
+{% set version = "1.14.0" %}
+{% set sha256 = "82208d6d8763f143b59790433b3b3661d57345a3fdbfeaee87c21ef3a422b3fa" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps --no-cache-dir --no-build-isolation -vvv
   entry_points:
-    - bioservices=bioservices.main:main
+    - bioservices = bioservices.main:main
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
+    - poetry-core
   run:
-    - python >=3.7
+    - python >=3.9
     - appdirs
     - beautifulsoup4
     - click
@@ -33,6 +34,8 @@ requirements:
     - pandas >=0.21.1
     - requests
     - requests_cache
+    - rich-click
+    - setuptools <78
     - suds-community >=0.7
     - lxml
     - tqdm
@@ -48,11 +51,13 @@ test:
     - bioservices --help
 
 about:
-  home: https://github.com/cokelaer/bioservices
-  summary: Access to Biological Web Services from Python
-  license: GPL-3.0-only
+  home: "https://github.com/cokelaer/bioservices"
+  summary: "Access to Biological Web Services from Python."
+  license: "GPL-3.0-only"
+  license_family: GPL3
   license_file: LICENSE
-  doc_url: https://bioservices.readthedocs.io/en/main/
+  doc_url: "https://bioservices.readthedocs.io/en/main"
+  dev_url: "https://github.com/cokelaer/bioservices"
 
 extra:
   recipe-maintainers:
