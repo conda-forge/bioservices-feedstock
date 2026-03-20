@@ -34,7 +34,7 @@ requirements:
     - pandas >=0.21.1
     - requests
     - requests_cache
-    - setuptools
+    - setuptools <78
     - suds-community >=0.7
     - lxml
     - tqdm
