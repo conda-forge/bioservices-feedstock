@@ -7,19 +7,20 @@ Home: https://github.com/cokelaer/bioservices
 
 Package license: GPL-3.0-only
 
-Summary: Access to Biological Web Services from Python
+Summary: Access to Biological Web Services from Python.
 
-Documentation: https://bioservices.readthedocs.io/en/main/
+Development: https://github.com/cokelaer/bioservices
+
+Documentation: https://bioservices.readthedocs.io/en/main
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12435&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bioservices-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
