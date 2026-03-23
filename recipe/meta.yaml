@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps --no-cache-dir --no-build-isolation -vvv
   entry_points:
@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - poetry-core
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - appdirs
     - beautifulsoup4
     - click
@@ -43,6 +43,8 @@ requirements:
     - xmltodict
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - bioservices
     - bioservices.apps
