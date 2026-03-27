@@ -1,6 +1,6 @@
 {% set name = "BioServices" %}
-{% set version = "1.15.0" %}
-{% set sha256 = "e38e888f6dcd9a158717f683143a297d070261cd19af6210627e53c3dbc7804b" %}
+{% set version = "1.16.0" %}
+{% set sha256 = "d87e3e2453f382cea3d64c279b80d13d17e131bb16d6c4082855cb2f1778b1c1" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps --no-cache-dir --no-build-isolation -vvv
   entry_points:
