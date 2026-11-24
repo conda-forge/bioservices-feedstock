@@ -1,13 +1,13 @@
 {% set name = "BioServices" %}
-{% set version = "1.16.0" %}
-{% set sha256 = "d87e3e2453f382cea3d64c279b80d13d17e131bb16d6c4082855cb2f1778b1c1" %}
+{% set version = "1.16.1" %}
+{% set sha256 = "863bea8fd44e074702bbf8a518ff8ce15925df41101e6a1cd7b3a2a0936dd034" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
